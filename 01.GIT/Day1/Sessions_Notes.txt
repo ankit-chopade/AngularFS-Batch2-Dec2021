@@ -221,3 +221,21 @@ Differences between multiple branches
 
 -----------------------------------------------------------------------------------------------------------------------------
 
+
+
+Git Restoring
+~~~~~~~~~~~~
+
+	Unstaging files
+		$ git restore --staged index.html
+		$ git restore --staged *.html
+		$ git restore --staged *.css
+	
+
+	// update the commit message 
+		$  git commit --amend -m "Hello File is added at 6:40 pm"
+	
+	//  tagging version details at the time of commit
+	$  git  tag -a v1.0 -m "my version 1.0"
+
+
