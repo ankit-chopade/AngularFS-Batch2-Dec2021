@@ -1,4 +1,3 @@
-
 Task
 ~~~~~	
 	1.   Create remote repository	
@@ -51,8 +50,37 @@ G3:
 								course.component.ts
 								course.component.html
 								course.component.css
+								
+-----------------------------------------------------------------------------------------------
+
+Task-2
+~~~~~~
+1.  Create a new branch called ---  testing
+2.  Add some files into the working directory 
+
+		data.services.ts
+		login.component.html
+
+3.  Push the files into remote repository --- to the testing branch  
+-------------------------------------------
+4. Move to other branch
+5. Check the differences		----  git diff
+-----------------------------------------------
+6. Check the logs
+7.  Merge  the changes into master branch ---  git merge
+8.  Check the logs
+	 Push the files into remote repository --- to the master branch  
+------------------------------------------------------------
+9.  move to the  testing branch
+10.  Add some files into the working directory 		
+		register.component.html
+11.  Push the files into remote repository --- to the testing branch  
+12.  Merge the changes into master using pull request option in github
+-------------------------------------------------------------------------
 
 
 
 
 
+
+								
