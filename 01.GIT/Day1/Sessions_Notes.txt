@@ -1,0 +1,298 @@
+
+Source Management Tools / Versioning  Tools
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+1.  SVN
+2.  TFS / Visual Source Safe
+3.  GIT
+
+
+
+Installation Phase
+~~~~~~~~~~~~~~~
+1.  Git account --- Register  --- https://github.com/
+
+		----  organizing remote repositories
+
+
+2.  Install Git ---  Git bash / Software   ---   https://git-scm.com/download/win
+
+		----  organizing local repositories
+
+---------------------------------------------------------------------------------------------------
+
+
+
+Gitbash  (Command prompt specific to GIT)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>    cd  /d							(Change the drive)
+>    cd   MyGitTest			(Change the directory)
+>	  clear 							(to clear the screen)
+
+
+>		Go to the directory 
+>  	git init 			
+
+>      git remote add origin  "git_rep_url"
+>      git remote add origin  "https://github.com/tnrao-trainer/MyTestRepo1412.git" 
+
+>     git pull origin master		
+
+
+	//  Add the required files in the working directory
+
+>		git  add   app.component.ts			( specific file)
+		git  add  -A										(All Files)
+
+	
+> 		git   commit   -m "commit message"
+
+>      git push origin master
+	
+		--->	push the committed files to central repository 
+
+
+
+
+
+
+
+
+
+Updates/Add New Files
+~~~~~~~~~~~~~~~~~~~~
+	a. Modify  --  app.component.ts
+	b. Add New File  :  login.component.ts
+
+>   git status
+>   git  add  login.component.ts
+>   git status
+>   git  add  app.component.ts
+>   git status
+>   git commit -m "Commit some new files at 2:24 pm"
+>   git push origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Working with GIT
+~~~~~~~~~~~~~~~
+
+
+Create GIT Repository
+
+
+a.  Local :		git  init
+b.  Remote :		
+
+		--->  github website
+		---> 
+
+
+
+
+git remote add origin "https://github.com/tnrao-trainer/MyProjectRepository2310.git" 
+
+
+
+
+
+
+
+
+
+Task
+~~~~~	
+	1.   Create remote repository	
+	2.   Clone into local 
+	3.   Add the required files
+	4.   Commit to remote repository
+	5.   Check the log and status commands
+	
+
+
+Task
+~~~~~~~
+
+Group1:  (Abhijeet  to Komal)
+		--->  Name  :  EMSAppliction			
+		-->   (1st commit)
+					Files :
+							emps.component.ts
+							emps.component.html
+							
+		-->  (2nd commit)
+					Files:	
+								depts.component.ts
+								depts.component.html
+								depts.component.css
+
+Group-2:        
+			--->  Name  :  PMSAppliction			
+			-->   (1st commit)
+					Files :
+							product.component.ts
+							product.component.html
+							
+			-->  (2nd commit)
+					Files:	
+								category.component.ts
+								category.component.html
+								category.component.css
+
+
+G3:	
+			--->  Name  :  SMSAppliction			
+			-->   (1st commit)
+					Files :
+							student.component.ts
+							student.component.html
+							
+			-->  (2nd commit)
+					Files:	
+								course.component.ts
+								course.component.html
+								course.component.css
+
+
+
+
+
+
+
+-----------------------------------------------------
+
+
+General Order of Execution
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Set-1  (Core commands to perform git activities)
+~~~~~~
+git  init
+git remote add origin  "git_rep_url"
+git checkout -b main
+git pull origin main
+git  add  MyGitTest.txt
+git  add  -A
+git commit -m "commit message"
+git push origin main
+
+
+Set-2	(To know the meta data about git activities)
+~~~~~
+git status
+git log
+git show  commitID
+git diff
+
+
+Stage-3    (Working with Branch)
+~~~~~~~
+git  checkout  -b  dev						(create and shifting branch)
+git  checkout  dev							(shifting branch)
+git  diff  master  dev
+git merge dev
+
+
+-----------------------------------------------------------------------------
+
+
+
+1. Creating branches
+2. Push the files into new branches
+
+
+
+
+
+-----------------------------------------------------
+
+
+
+
+
+
+
+Organizing project source code among multiple team members
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-->  They create one main(production/perfect) branch 	----	refer production
+
+-->  Add  Contributors (other team members)
+		--> Send invitation for contribution
+					--- from repository settings	
+					
+-->  	Restrict the main branch	so that other contributors does not disturb the files.
+
+		-->  Add restriction rules on the particular branch (main)
+		-->  From repository settings					
+
+-->   Contributors are push the files into another branches  (dev/feature/test)
+-->   Raise the PullRequest to merge the code into main branch. 
+
+-->  Owner of the repository will get pullrequest as notification
+		a.  Review
+		b.  Comment 
+		c.  Approve
+		
+-->  Once the owner approve the pull request, then changes are reflected in main branch. 		
+	
+
+
+-----------------------------------------------------------------------
+
+Approving PullRequest
+~~~~~~~~~~~~~~~~~~~
+
+
+
+Review Changes
+
+	1. Comment
+	2. Approve
+	3. Request Changes
+
+
+
+
+
+
+
+
+
+
+merge
+~~~~~~
+
+
+>		git merge master dev
+>		git log 
+>		git log  --oneline		(display each commit messages in one-line)
+>		git log  --graph		(represent graphical format --- connections)
+
+
+
+
+rebase
+~~~~~~~
+
+
+
+git commit -m "m1 file is created at 11:21 AM"
