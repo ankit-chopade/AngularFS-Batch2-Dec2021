@@ -1,4 +1,3 @@
-
 Source Management Tools / Versioning  Tools
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -54,12 +53,6 @@ Gitbash  (Command prompt specific to GIT)
 
 
 
-
-
-
-
-
-
 Updates/Add New Files
 ~~~~~~~~~~~~~~~~~~~~
 	a. Modify  --  app.component.ts
@@ -73,45 +66,84 @@ Updates/Add New Files
 >   git commit -m "Commit some new files at 2:24 pm"
 >   git push origin master
 
+------------------------------------------------------------------------------------------------------
+
+Task
+~~~~~	
+	1.   Create remote repository	
+	2.   Clone into local 
+	3.   Add the required files
+	4.   Commit to remote repository
+	5.   Check the log and status commands
+	
 
 
+Task
+~~~~~~~
+
+Group1:  (Abhijeet  to Komal)
+		--->  Name  :  EMSAppliction			
+		-->   (1st commit)
+					Files :
+							emps.component.ts
+							emps.component.html
+							
+		-->  (2nd commit)
+					Files:	
+								depts.component.ts
+								depts.component.html
+								depts.component.css
+
+Group-2:     (Maneesh to Roshini )     
+
+			--->  Name  :  PMSAppliction			
+			-->   (1st commit)
+					Files :
+							product.component.ts
+							product.component.html
+							
+			-->  (2nd commit)
+					Files:	
+								category.component.ts
+								category.component.html
+								category.component.css
 
 
+G3:		(Roshini Rathod  to  Vishal)
+			--->  Name  :  SMSAppliction			
+			-->   (1st commit)
+					Files :
+							student.component.ts
+							student.component.html
+							
+			-->  (2nd commit)
+					Files:	
+								course.component.ts
+								course.component.html
+								course.component.css
+
+---------------------------------------------------------------------------------------------------------------------
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-Working with GIT
+Git Configuration
 ~~~~~~~~~~~~~~~
+--> You can specify Git configuration settings with the git config command.
+--> We can get/set the user details using config command
 
 
-Create GIT Repository
+Set user name and user email
+~~~~~~~~~~~~~~~~~~~~~~~~~
+> git config --global user.name "John Doe" 
+> git config --global user.email  "johndoe@example.com"
 
 
-a.  Local :		git  init
-b.  Remote :		
+Get user name and user email
+~~~~~~~~~~~~~~~~~~~~~~~~~
+> git config --global user.name 
+> git config --global user.email 
 
-		--->  github website
-		---> 
+--------------------------------------------------------------------------------------------------------------
 
-
-
-
-git remote add origin "https://github.com/tnrao-trainer/MyProjectRepository2310.git" 
-
- 
-
------------------------------------------------------
 
 
 General Order of Execution
@@ -122,112 +154,66 @@ Set-1  (Core commands to perform git activities)
 ~~~~~~
 git  init
 git remote add origin  "git_rep_url"
-git checkout -b main
-git pull origin main
+git pull origin master
 git  add  MyGitTest.txt
 git  add  -A
 git commit -m "commit message"
-git push origin main
+git push origin master
 
 
 Set-2	(To know the meta data about git activities)
 ~~~~~
 git status
-git log
+
+git log	
+		--- to show the chronological commit history for a repository.
+	
 git show  commitID
+git show  fc9ece8e819ad57a1a504c2ef6899ab1c36c749c
+
 git diff
 
 
-Stage-3    (Working with Branch)
+Set-3    (Working with Branch)
 ~~~~~~~
 git  checkout  -b  dev						(create and shifting branch)
-git  checkout  dev							(shifting branch)
+git  checkout  dev								(shifting branch)
 git  diff  master  dev
 git merge dev
-
 
 -----------------------------------------------------------------------------
 
 
 
-1. Creating branches
-2. Push the files into new branches
+
+Merging changes of one branch into another branch
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+>  git  checkout  dev	
+
+Add some files / modify the exists files
+
+> git  add data.services.ts
+> git  commit -m  "data service is added at 4:27 pm" 
+>  git push origin dev
+
+> git checkout master
+> git log
+> git merge dev
+> git log
 
 
 
+Differences between multiple branches
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>  git  checkout  dev	
+	Add some files / modify the exists files
+> git  add data.services.ts
+> git  commit -m  "data service is added at 4:27 pm" 
 
 
------------------------------------------------------
+> git checkout master
+> git diff  master dev
 
+-----------------------------------------------------------------------------------------------------------------------------
 
-
-
-
-
-
-Organizing project source code among multiple team members
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--->  They create one main(production/perfect) branch 	----	refer production
-
--->  Add  Contributors (other team members)
-		--> Send invitation for contribution
-					--- from repository settings	
-					
--->  	Restrict the main branch	so that other contributors does not disturb the files.
-
-		-->  Add restriction rules on the particular branch (main)
-		-->  From repository settings					
-
--->   Contributors are push the files into another branches  (dev/feature/test)
--->   Raise the PullRequest to merge the code into main branch. 
-
--->  Owner of the repository will get pullrequest as notification
-		a.  Review
-		b.  Comment 
-		c.  Approve
-		
--->  Once the owner approve the pull request, then changes are reflected in main branch. 		
-	
-
-
------------------------------------------------------------------------
-
-Approving PullRequest
-~~~~~~~~~~~~~~~~~~~
-
-
-
-Review Changes
-
-	1. Comment
-	2. Approve
-	3. Request Changes
-
-
-
-
-
-
-
-
-
-
-merge
-~~~~~~
-
-
->		git merge master dev
->		git log 
->		git log  --oneline		(display each commit messages in one-line)
->		git log  --graph		(represent graphical format --- connections)
-
-
-
-
-rebase
-~~~~~~~
-
-
-
-git commit -m "m1 file is created at 11:21 AM"
