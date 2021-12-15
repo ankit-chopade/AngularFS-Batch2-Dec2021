@@ -155,6 +155,75 @@ Note:
 
 
 
+Task
+~~~~
+
+1. Ask the other participants to access pull the data from the repository.	
+2. Try to push some files ----  expected :  some error
+
+3. Add that person as contributor
+4. Try to do step2  
+
+
+5. Create some branch rules ---  add restrictions. 
+6. Try to do step2  --- new file		----   expected :  access denied error
+
+7. Make a pull request from github
+8. Approve. 
+
+-------------------------------------------------------------------------------
+
+
+Git Stash
+~~~~~~~~
+
+
+Generally, the stash's meaning is "store something safely in a hidden place." 
+The sense in Git is also the same for stash; 
+Git temporarily saves your data safely without committing.
+Stashing takes the messy state of your working directory, and temporarily save it for further use. 
+
+
+
+$ git stash
+$ git stash save  “m1 updated”
+$ git stash list
+$ git stash apply
+$ git stash apply  stash@{1}
+$ git stash drop
+$ git stash drop  stash@{1}
+$ git stash clear
+
+
+----------------------------------------------------------------------------------------------
+
+Restore, Reset
+~~~~~~~~~~~~~~
+
+Restore:  It can be rollback the changes before commit/staging area. 
+			git  restore  m1.txt
+
+Reset:		It can be rollback the changes after commit
+
+>   git reset 0bd2ab731ee05efcc71bc6602ab82e6a4db03529
+
+$ git log --oneline
+		0bd2ab7 (HEAD -> master) m1 is updated with f2 function
+		fc0e302 m2.txt file is created
+		9964b17 function  f1  is added in m1.txt
+		1d8ed2e m1.txt file created
+
+$ git reset fc0e302
+
+$ git log --oneline
+	fc0e302 (HEAD -> master) m2.txt file is created
+	9964b17 function  f1  is added in m1.txt
+	1d8ed2e m1.txt file created
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+
 
 
 
