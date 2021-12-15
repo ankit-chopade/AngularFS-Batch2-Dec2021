@@ -102,3 +102,64 @@ doc/*.txt
 
 # ignore all .pdf files in the doc/ directory and any of its subdirectories
 doc/**/*.pdf
+
+-------------------------------------------------------------------------------
+
+
+
+
+
+Organizing project source code among multiple team members
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+1.  We create one  main branch /master branch    ----  refer production
+2.  Add Contributors 	(other team members)
+
+		[Available in repository settings]
+
+				
+				a.  Send invitation for contribution
+				
+						--->  Repository Settings
+						-->  Manage Access
+						-->  Click "Add People" button
+						--> Provide "Git User Id" 
+								-- Click "Select a collaborator above"
+				
+				b.  Apply/Create Branch rules 					
+									
+								--->   Go to Branches
+								--->   Branch protection Rules   -->  Add Rule
+								--->   Check the following options:
+										
+										Branch name pattern  :  master	
+										Check :    Require a pull request before merging
+										Check :  Include Administrators 
+										
+								--> "Save Changes"				
+								
+								
+Note:
+
+	--> Contributors can push the files into other branches (dev/feature/test).
+	--> Raise the PullRequest to merge the code into master branch. 
+	--> Owner of the repository will get pull request as notification
+				a. Review
+				b. Comment
+				c. Approve
+
+-->  Once the owner approve the pull request, then changes are reflected in master branch. 
+-------------------------------------------------------------------------------------------------------------------------------------------------
+											
+
+
+
+
+
+
+
+
+
+
+
