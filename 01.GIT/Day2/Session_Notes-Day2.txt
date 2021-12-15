@@ -1,0 +1,72 @@
+Merge  Vs  Rebase
+~~~~~~~~~~~~~~~
+
+git  merge  dev master
+git  rebase  dev master
+--------------------------------------------------------------------------------------
+
+[ Merge Demo ]
+
+1.  Create a separate folder (as working directory) for this task.
+
+
+git init
+
+touch m1.txt
+git add -A
+git commit -m "m1.txt  file is added under master branch"
+
+touch m2.txt
+git add -A
+git commit -m "m2.txt  file is added under master branch"
+
+git checkout -b dev
+
+touch d1.txt
+git add -A
+git commit -m "d1.txt  file is added under dev branch"
+
+touch d2.txt
+git add -A
+git commit -m "d2.txt  file is added under dev branch"
+git log
+
+git checkout master
+git log
+git merge dev master
+git log
+
+
+-------------------------------------------
+[Rebase Demo]
+
+1.  Create a separate folder (as working directory) for this task.
+
+
+git init
+
+touch m1.txt
+git add -A
+git commit -m "m1.txt  file is added under master branch"
+
+touch m2.txt
+git add -A
+git commit -m "m2.txt  file is added under master branch"
+
+git checkout -b dev
+
+touch d1.txt
+git add -A
+git commit -m "d1.txt  file is added under dev branch"
+
+touch d2.txt
+git add -A
+git commit -m "d2.txt  file is added under dev branch"
+git log
+
+git checkout master
+git log
+git rebase dev master
+git log
+
+-----------------------------------------------------------------------------------------------------
