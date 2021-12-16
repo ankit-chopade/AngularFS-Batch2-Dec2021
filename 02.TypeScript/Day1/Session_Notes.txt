@@ -1,0 +1,130 @@
+TypeScript Language
+~~~~~~~~~~~~~~~~~~~
+
+What is TypeScript?
+
+--> New language from Microsoft
+--> It was designed by Anders Hejlsberg (designer of C#) at Microsoft. 
+--> Superset of JavaScript
+--> Powerful Programming features
+
+
+
+Angular JS 			---		2012			---			JavaScript
+Angular2....13		---		2016			---			TypeScript
+
+	
+C	---		C++, Java, C#, JavaScript, TypeScript 	
+
+
+Issue JavaScript
+
+
+var, let
+
+
+
+JavaScript
+var  x = 10;
+x = "Hello World";
+x = true;
+x = { sid  : 1025, sname  : "Scott"}
+
+
+
+var x:number = 10;
+x = "Hello World"; // error
+x = true;  // error
+x = { sid  : 1025, sname  : "Scott"}  // error
+
+
+
+variables 	----	arrays, functions, objects 	
+
+
+
+Why TypeScript?  
+
+The popular JavaScript framework Angular 2.0 is written in TypeScript. 
+TypeScript is a strongly typed, object oriented, compiled language. 
+Pure object oriented with classes, interfaces and strictly typed like C#  / Java.
+
+
+Benefits
+~~~~~~~
+Strongly Typed
+Compilation
+Object Oriented
+Comfortable for all developers
+Open Source
+
+--------------------------------------------------------------------------------------------
+
+Environment Setup
+~~~~~~~~~~~~~~~~
+1. Install  VS Code  			---  	Editor
+2. Install NodeJS  (npm)	---		Support Environment
+3. Install TypeScript			---		TypeScript Compiler,Libs		
+
+
+npm 	install 	-i   typescript
+npm 	install 	-i   @angular/cli
+
+ng  version
+----------------------------------------------------------------------------------
+
+
+
+1.   Create   Demo1.ts
+2.   Compile 	
+		>		tsc    Demo1.ts		----			Demo1.js
+		>		node   Demo1.js
+		
+		
+		
+
+
+Write in *.html
+~~~~~~~~~~~
+	<script src="Demo1.js">
+	</script>
+
+
+
+
+
+
+Types in TypeScript
+~~~~~~~~~~~~~~~~
+let uname:string  =  "Scott";
+let age:number  =  25;
+let isValidUser:boolean = true;
+
+
+Arrays:			let  unames:string[]  =  [];
+
+Function :		
+			function  showMessage(message:string):void
+			function  sum(x:number,  y:number):number
+			
+			
+			
+			
+				
+
+
+
+
+
+
+
+
+
+ 
+	
+
+
+
+
+
+
