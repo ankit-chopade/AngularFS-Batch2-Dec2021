@@ -112,19 +112,46 @@ Function :
 			
 				
 
+Functions in TypeScript
+~~~~~~~~~~~~~~~~~~~~
+
+
+JS	-		function   fn_name(param1, param2,....)
+
+TS	-		function   fn_name(param1:type,  param2:type, ....)  :  return_type
+
+
+---------------------------------------------------------------------------------------
 
 
 
+  
+	arr1 =  [1,2,3,4,5];
+	
+	arr1.reverse();
+	arr1.push(6);
+	arr1.pop();
+	
+	
+
+	arr2  =   arr1.map(  callback  )
 
 
-
-
-
- 
+	modify the array without change original array
+	returns the new array
+	call a function on each element of the array
 	
 
 
+	ar.map(  Math.sqrt  );
 
 
 
+	
 
+	string method
+	array methods
+	date
+	math
+
+ 
