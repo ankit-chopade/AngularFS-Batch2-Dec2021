@@ -24,3 +24,24 @@ Creating custom pipe:
 
 	input		---			string
 	output		---			string
+	
+	
+
+	
+	
+		input		----			output
+		------------------------------------------
+
+lowercase	String					String
+date 		date					String
+slice		Array					Array
+...
+gender		String					String
+
+		M					Male
+		F					Female
+
+filter		Array					Array								
+
+
+
