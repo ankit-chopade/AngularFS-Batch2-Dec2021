@@ -96,6 +96,16 @@ Note:		Subject also suppors all the methods same as observable:
 					next(),  error(),  complete()
 -------------------------------------------------------------------------------
 
+Tasks
+~~~~~~
+1. Check the observable programs that we discussed .
+2.  What is JSON?  What is the role of JSON in AJAX?    
+3.  What are the rules to preapre JSON Data?  advnatages  of JSON over XML?
+4.   Observe the JSON data in the below urls:		
+		a.   https://reqres.in/api/users
+		b.   https://www.w3schools.com/angular/customers.php
+		
+-------------------------------------------------------------------------------------------------		
 
 RxJS Operators
 ~~~~~~~~~~~~
