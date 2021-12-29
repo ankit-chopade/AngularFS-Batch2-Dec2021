@@ -51,5 +51,26 @@ public customerForm : FormGroup = new FormGroup({
 </form>
 
 
+---------------------------
+
+
+
+Task
+~~~~~
+Create Angular components to create vehicle Registration Form
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--> implement the following validations using Angular forms concept --- model driven
+	
+
+1. Owner Name 		---     Required
+2. Contact Number  ----	Required , should contain 10 digits
+3. Owner Email   ---   Required, Email
+3. Vehicle Registration Number   ----  Should be proper format ---   (Eg:  TS10AB1234)
+4. Address  :     Required
+5. Model  :   10 characters
+6. Color :     Required 
+7. Year	:	2012 to 2022
+
+
 
 
