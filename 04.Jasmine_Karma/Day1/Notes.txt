@@ -163,6 +163,9 @@ TestBed Class
 -->	The TestBed configures and initializes environment for unit testing. 
 -->	The TestBed instantiates required component and services for testing.
 
+
+	TestBed.configureTestingModule({...}).compileComponents();
+	
 	const fixture = TestBed.createComponent(AppComponent);
 	
 	
@@ -170,13 +173,16 @@ TestBed Class
 	
 ComponentFixture
 ~~~~~~~~~~~~~~~	
---> The ComponentFixture is the fixture for debugging and testing a component. It is instantiated using TestBed.
-To create component object using ComponentFixture, it provides componentInstance property
-To access HTML element from HTML template, the ComponentFixture provides debugElement and nativeElement.
-In querySelector we can pass element id or element type. 
-In ComponentFixture,  debugElement and  the nativeElement to access html tags
+--> The ComponentFixture is the fixture for debugging and testing a component. 
+--> It is instantiated using TestBed.
+--> To create component object using ComponentFixture, it provides componentInstance property
 
-	
+	const app = fixture.componentInstance;
+
+--> To access HTML element from HTML template, the ComponentFixture provides debugElement and nativeElement.
+--> In querySelector we can pass element id or element type. 
+--> In ComponentFixture,  debugElement and  the nativeElement to access html tags.
+
 	
 	
 1.  Should create the app ---  app component instance	
@@ -199,7 +205,7 @@ it('should create the app', () => {
 
   it(`should have as title 'my-project'`, () => {
 	 
-    // Arranger	 
+    // Arrange 
     const fixture = TestBed.createComponent(AppComponent);
 	
 	// Action
@@ -210,30 +216,69 @@ it('should create the app', () => {
   });	
 -------------------------------------------------------------------------------------------------
 
+Structure of a Jasmine Unit Test
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+1. describe() function
+2. it() function
+3. expect() function
+4. Jasmine matchers
+
+		a.  toBeTruthy()
+		b.  toBe("")
+		c.  toBe(true) 
+		d.  not.toBe(true)
+		e.  toEqual()
+		f.   toContain("success")
+		g.   toBeLessThan(100)
+		h.   toBeGreaterThan(100)
+		i.   toBeGreaterThanOrEqual(100)
+		j.   toBeLessThanOrEqual(100)
+		
+		
+
+5. Setup and Teardown using beforeEach(), afterEach(), beforeAll(),afterAll()
+
+	-->  to execute the code before or after the testcase processing
+	
+		beforeEach()	----		multiple ----		for each testcase  
+		afterEach()	----		multiple ----		for each testcase  
+		beforeAll()		----		only once
+		afterAll()		----		only once 
+--------------------------------------------------------------------------------
+How to skip test and test suite?
+
+1.    xit()		----	skip only that test
+2.    xdescribe()  ---- skip the entire test suite
+--------------------------------------------------------------------------------
 
 Testing Angular components
 ~~~~~~~~~~~~~~~~~~~~~~
-
 1. Testing  Component  properties
 2. Testing  Component  methods
 3.  Testing  Component Templates ----  HTMl Tags
 4.  Testing  input fields ---  textbox
 5.  Testing  input fields ---  textbox --- with [(ngModel)]
+		--- include  "FormsModule"  in testbed configuration
+
 6.  Testing  button click events 
-
-
+			
+	
 
 
 Getting single element:
 		const inputObj =  fixture.nativeElement.querySelector("input");		
-
 		---> returns first matching element
 
 Getting multiple element:
 		 const inputArray =  fixture.nativeElement.querySelectorAll("input");
 
-	
+
+Trigger events in unit testing:		
+	inputObj.dispatchEvent(new Event("input"));
+	inputObj.dispatchEvent(new Event("click"));
 
 	
- 
+  const headObj = fixture.nativeElement.querySelector('h3');
+    console.log(headObj.innerText);
