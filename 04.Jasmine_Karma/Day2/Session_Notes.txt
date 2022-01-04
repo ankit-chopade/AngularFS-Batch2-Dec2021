@@ -220,5 +220,45 @@ Usage:
 		
  
 
+--------------------------------------------------------------------------------------------------------------------------
+
+Testing Routes in Angular
+~~~~~~~~~~~~~~~~~~~~~
+
+--> Verify the navigation to the correct routes.
+--> Verify the parameters in the routes
+--> Suppose routes are secured, then it supposed to navigate to login route
+		--> Emps   --> Login
+		
+
+Required Types
+~~~~~~~~~~~~~~
+
+1. RouterTestingModule 	----		@angular/router/testing
+2. Location 		---		@angular/common
+3.  TestBed			---		@angular/core/testing
+	 ComponetFixture
+	 fakeAsync
+	 tick
+4.	 routes			----		app-routing.module
+5.  Required Components
+
+--------------------------------------------------------------
+
+
+1.  Navigate to ---  /depts
+2.  Go to  --- Login?returnUrl=/Depts
+3.  Access input and enter uid/pwd 
+4.  Click login button click 
+5.  Current location should be /depts
+
+
+--------------------------------------------------------------------------------------
+
+
+
+
+ 
+
 
 
